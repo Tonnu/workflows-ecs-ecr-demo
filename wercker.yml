@@ -90,7 +90,7 @@ deploy-to-ecs:
   box: python:2.7-slim
   steps:
     - 1science/aws-ecs:
-        key: $AWS_ACCESS_KEY
+        key: $AWS_ACCESS_KEY_ID
         secret: $AWS_SECRET_ACCESS_KEY
         cluster-name: workflows-demo
         service-name: workflows-demo-service
