@@ -12,7 +12,7 @@ cat > workflows-demo-task-definition.json <<EOF
         }
       ],
       "essential": true,
-      "entryPoint": "nginx -g 'daemon off',
+      "entryPoint": [],
       "mountPoints": [],
       "name": "todo-demo",
       "environment": [],

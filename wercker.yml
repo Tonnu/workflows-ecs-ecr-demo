@@ -77,6 +77,7 @@ push-release-ecr:
         code: |
           rm -rf /usr/share/nginx/html/*
           cp -Rp $WERCKER_SOURCE_DIR/* /usr/share/nginx/html
+          echo "daemon off;" >> /etc/nginx/nginx.conf
 
     - internal/docker-push:
         disable-sync: true
@@ -86,7 +87,7 @@ push-release-ecr:
         aws-registry-id: $AWS_REGISTRY_ID
         repository: workflows-demo
         tag: $WERCKER_GIT_BRANCH
-        cmd: nginx -g 'daemon off;'
+        cmd: nginx;
 
 deploy-to-ecs:
   box: python:2.7-slim
