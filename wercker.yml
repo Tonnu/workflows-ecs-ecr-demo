@@ -88,6 +88,7 @@ push-release-ecr:
         repository: workflows-demo
         tag: $WERCKER_GIT_BRANCH
         cmd: nginx;
+        ports: 80
 
 deploy-to-ecs:
   box: python:2.7-slim
