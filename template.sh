@@ -17,7 +17,7 @@ cat > workflows-demo-task-definition.json <<EOF
       "name": "todo-demo",
       "environment": [],
       "links": [],
-      "image": "$AWS_REGISTRY_URL/workflows-demo:$WERCKER_BRANCH_NAME",
+      "image": "$AWS_REGISTRY_URL/workflows-demo:$WERCKER_GIT_BRANCH",
       "command": [],
       "cpu": 10
     }
